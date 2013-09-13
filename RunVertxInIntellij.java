@@ -2,9 +2,10 @@ class RunVertxInIntellij extends TestVerticle{
 
   @Override
   void start() {
-    System.setProperty("vertx.test.timeout", "-1");
     initialize();
     container.deployModule("com.yourcompany~your-module-name~version");
+    // or if you want to use the handler
+    //container.deployModule("com.yourcompany~your-module-name~version", new SomeHandler());
   }
 
   @Test
